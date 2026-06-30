@@ -1,0 +1,10 @@
+body{margin:0;background:#111;font-family:system-ui,sans-serif}
+.wrap{display:grid;place-items:center;min-height:100vh;padding:20px}
+.card{max-width:520px;width:100%;background:#fff;border-radius:24px;padding:32px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+h1{margin:0;font-size:42px}h2{margin-top:24px}
+.pill{display:inline-block;background:#111;color:#fff;padding:8px 14px;border-radius:999px;margin-top:10px}
+p{line-height:1.7;color:#333}
+.box{background:#f5f5f5;border-radius:18px;padding:18px;margin-top:22px}
+.btn{display:block;margin-top:22px;background:#111;color:#fff;text-decoration:none;padding:15px;border-radius:14px;font-weight:700}
+.email{font-weight:800;font-size:18px;word-break:break-all}
+.foot{margin-top:24px;color:#666;font-size:13px}
