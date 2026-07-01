@@ -1,9 +1,7 @@
-# BAEROO Site
+# BAEROO Site v6
 
-BAEROO QR 테스트 사이트 v5입니다.
-
-## 포함된 기능
-- Google Analytics 연결
-- 유튜브 채널 연결
-- 광고 문의 이메일 표시
-- 모바일 최적화 디자인
+변경 내용:
+- 유튜브 링크 제거
+- 프로젝트 소개 문구 수정
+- 랜덤 오늘의 한 줄 운세 기능 추가
+- Google Analytics 유지

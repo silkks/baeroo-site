@@ -57,7 +57,6 @@ body {
   color: #fff;
   font-size: 24px;
   font-weight: 950;
-  letter-spacing: -1px;
 }
 
 h1 {
@@ -92,8 +91,8 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: 34px;
-  line-height: 1.18;
+  font-size: 33px;
+  line-height: 1.2;
   letter-spacing: -1.4px;
 }
 
@@ -105,41 +104,8 @@ h2 {
   word-break: keep-all;
 }
 
-.info {
-  margin-top: 4px;
-  padding: 18px;
-  border-radius: 22px;
-  background: var(--soft);
-}
-
-.info p {
-  margin: 0;
-  color: #383b42;
-  line-height: 1.58;
-  font-size: 15px;
-  word-break: keep-all;
-}
-
-.youtube {
-  display: block;
-  margin-top: 16px;
-  padding: 17px 18px;
-  border-radius: 18px;
-  background: #111113;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 950;
-  transition: transform 0.16s ease, opacity 0.16s ease;
-}
-
-.youtube:active {
-  transform: scale(0.98);
-  opacity: 0.9;
-}
-
-.contact {
+.contact,
+.fortune {
   margin-top: 18px;
   padding: 20px 18px;
   border: 1px solid var(--line);
@@ -150,7 +116,6 @@ h2 {
 .contact h3 {
   margin: 0 0 10px;
   font-size: 19px;
-  letter-spacing: -0.4px;
 }
 
 .contact p {
@@ -175,22 +140,52 @@ h2 {
   word-break: break-all;
 }
 
+.fortune {
+  background: var(--soft);
+  text-align: center;
+}
+
+.fortune-label {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.fortune p {
+  margin: 8px 0 16px;
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 800;
+  word-break: keep-all;
+}
+
+.fortune button {
+  border: 0;
+  background: #111113;
+  color: #fff;
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.fortune button:active {
+  transform: scale(0.98);
+}
+
 footer {
   margin-top: 22px;
   color: #9a9da5;
   text-align: center;
   font-size: 13px;
+  font-weight: 800;
 }
 
 @keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 420px) {
@@ -200,6 +195,6 @@ footer {
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 29px;
   }
 }
