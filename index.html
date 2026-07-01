@@ -36,7 +36,8 @@
 
       <div class="counter">
         <span>현재까지</span>
-        <strong>총 <em id="visitCount">...</em>명이 이 프로젝트를 확인했습니다.</strong>
+        <strong><em id="visitCount">...</em>명이<br>이 프로젝트를 확인했습니다.</strong>
+        <small>같은 기기에서는 하루 1회만 집계됩니다.</small>
       </div>
 
       <div class="contact">
@@ -57,13 +58,23 @@
   </main>
 
   <script>
-    const counterKey = "baeroo_qr_project_20260701_v1";
-    const counterUrl = `https://countapi.mileshilliard.com/api/v1/hit/${counterKey}`;
+    const counterKey = "baeroo_qr_project_20260701_v2";
+    const today = new Date().toISOString().slice(0, 10);
+    const storageKey = `baeroo_counted_date_${counterKey}`;
+    const countedDate = localStorage.getItem(storageKey);
 
-    fetch(counterUrl)
+    const hitUrl = `https://countapi.mileshilliard.com/api/v1/hit/${counterKey}`;
+    const getUrl = `https://countapi.mileshilliard.com/api/v1/get/${counterKey}`;
+
+    const countUrl = countedDate === today ? getUrl : hitUrl;
+
+    fetch(countUrl)
       .then(response => response.json())
       .then(data => {
-        const count = Number(data.value).toLocaleString("ko-KR");
+        if (countedDate !== today) {
+          localStorage.setItem(storageKey, today);
+        }
+        const count = Number(data.value || 0).toLocaleString("ko-KR");
         document.getElementById("visitCount").textContent = count;
       })
       .catch(() => {

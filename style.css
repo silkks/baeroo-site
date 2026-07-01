@@ -106,7 +106,7 @@ h2 {
 
 .counter {
   margin-top: 4px;
-  padding: 18px;
+  padding: 20px 18px;
   border-radius: 24px;
   background: #111113;
   color: #fff;
@@ -115,7 +115,7 @@ h2 {
 
 .counter span {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: #c9c9cf;
   font-size: 13px;
   font-weight: 800;
@@ -123,14 +123,22 @@ h2 {
 
 .counter strong {
   display: block;
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.45;
   word-break: keep-all;
 }
 
 .counter em {
   font-style: normal;
-  font-size: 24px;
+  font-size: 36px;
+  font-weight: 950;
+}
+
+.counter small {
+  display: block;
+  margin-top: 10px;
+  color: #a8a8ae;
+  font-size: 12px;
 }
 
 .contact,
