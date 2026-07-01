@@ -104,6 +104,35 @@ h2 {
   word-break: keep-all;
 }
 
+.counter {
+  margin-top: 4px;
+  padding: 18px;
+  border-radius: 24px;
+  background: #111113;
+  color: #fff;
+  text-align: center;
+}
+
+.counter span {
+  display: block;
+  margin-bottom: 6px;
+  color: #c9c9cf;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.counter strong {
+  display: block;
+  font-size: 17px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.counter em {
+  font-style: normal;
+  font-size: 24px;
+}
+
 .contact,
 .fortune {
   margin-top: 18px;

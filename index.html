@@ -34,6 +34,11 @@
         </p>
       </div>
 
+      <div class="counter">
+        <span>현재까지</span>
+        <strong>총 <em id="visitCount">...</em>명이 이 프로젝트를 확인했습니다.</strong>
+      </div>
+
       <div class="contact">
         <h3>광고 문의</h3>
         <p class="ready">현재 테스트를 진행하고 있습니다.</p>
@@ -52,6 +57,19 @@
   </main>
 
   <script>
+    const counterKey = "baeroo_qr_project_20260701_v1";
+    const counterUrl = `https://countapi.mileshilliard.com/api/v1/hit/${counterKey}`;
+
+    fetch(counterUrl)
+      .then(response => response.json())
+      .then(data => {
+        const count = Number(data.value).toLocaleString("ko-KR");
+        document.getElementById("visitCount").textContent = count;
+      })
+      .catch(() => {
+        document.getElementById("visitCount").textContent = "-";
+      });
+
     const fortunes = [
       "오늘은 작은 시도가 예상보다 큰 힌트를 줄 수 있습니다.",
       "눈에 띄지 않던 기회가 가까운 곳에서 보일 수 있습니다.",
